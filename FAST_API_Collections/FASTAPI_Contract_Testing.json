@@ -768,7 +768,12 @@
       ],
       "request": {
         "method": "GET",
-        "header": [],
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{api-key}}"
+          }
+        ],
         "body": {},
         "url": "https://api.getpostman.com/environments"
       },
