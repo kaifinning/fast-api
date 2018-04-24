@@ -746,6 +746,35 @@
       ]
     },
     {
+      "_postman_id": "dc07be2e-e1b5-4e19-b556-1e4ebbb63a1d",
+      "name": "Get Mock EnvironmentID",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "8a60a0f0-4446-4e43-8127-3b577d9b2ff6",
+            "type": "text/javascript",
+            "exec": [
+              "var environmentsResponse = JSON.parse(responseBody);",
+              "console.log(environmentsResponse);",
+              "",
+              "var result = environmentsResponse.environments[1].uid;",
+              "console.log(result);",
+              "",
+              "pm.environment.set(\"mockEnvironmentID\", result);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": "https://api.getpostman.com/environments"
+      },
+      "response": []
+    },
+    {
       "_postman_id": "70e972ec-aeb9-4364-9230-d8def9defc5a",
       "name": "TestingLoop",
       "event": [
@@ -824,35 +853,6 @@
             }
           ]
         }
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "dc07be2e-e1b5-4e19-b556-1e4ebbb63a1d",
-      "name": "Get Mock EnvironmentID",
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "id": "8a60a0f0-4446-4e43-8127-3b577d9b2ff6",
-            "type": "text/javascript",
-            "exec": [
-              "var environmentsResponse = JSON.parse(responseBody);",
-              "console.log(environmentsResponse);",
-              "",
-              "var result = environmentsResponse.environments[1].uid;",
-              "console.log(result);",
-              "",
-              "pm.environment.set(\"mockEnvironmentID\", result);"
-            ]
-          }
-        }
-      ],
-      "request": {
-        "method": "GET",
-        "header": [],
-        "body": {},
-        "url": "https://api.getpostman.com/environments"
       },
       "response": []
     }
