@@ -780,6 +780,17 @@
       "response": []
     },
     {
+      "_postman_id": "985fc4e3-57e8-479b-88d1-689ea5215708",
+      "name": "Get Mock Environment Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": ""
+      },
+      "response": []
+    },
+    {
       "_postman_id": "70e972ec-aeb9-4364-9230-d8def9defc5a",
       "name": "TestingLoop",
       "event": [
@@ -858,17 +869,6 @@
             }
           ]
         }
-      },
-      "response": []
-    },
-    {
-      "_postman_id": "985fc4e3-57e8-479b-88d1-689ea5215708",
-      "name": "Get Mock Environment Details",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "body": {},
-        "url": ""
       },
       "response": []
     }
