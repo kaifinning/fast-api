@@ -785,11 +785,35 @@
     {
       "_postman_id": "985fc4e3-57e8-479b-88d1-689ea5215708",
       "name": "Get Mock Environment Details",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "id": "fc81d82b-5794-469f-b6f2-feb1686b3678",
+            "type": "text/javascript",
+            "exec": [
+              "var result = JSON.parse(responseBody);",
+              "console.log(result);",
+              "pm.environment.set(\"mockEnvironmentVariables\", result.environment.values);",
+              "",
+              "",
+              "",
+              "var test = pm.environment.get(\"mockEnvironmentVariables\");",
+              "console.log(test[0].key);"
+            ]
+          }
+        }
+      ],
       "request": {
         "method": "GET",
-        "header": [],
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{api-key}}"
+          }
+        ],
         "body": {},
-        "url": ""
+        "url": "https://api.getpostman.com/environments/{{mockEnvironmentID}}"
       },
       "response": []
     },
